@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Image, View, Text, StyleSheet } from "react-native";
 import SkiiImage from "../assets/skii.png";
-export default function CategoryListItem(props) {
+export default function CategoryListItem({ category }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{props.title}</Text>
+      <Text style={styles.title}>{category.name}</Text>
       <Image source={SkiiImage} style={styles.categoryImage} />
     </View>
   );
@@ -25,11 +25,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignItems: "center",
     padding: 16,
-    width: "80%",
+    borderWidth: 0.1,
+    width: "100%",
     shadowColor: "red",
     backgroundColor: "#fff",
     borderRadius: 4,
-    elevation: 3,
+    elevation: 4,
     shadowOpacity: 0.1,
     shadowRadius: 20,
     shadowOffset: { width: 0, height: 0 }

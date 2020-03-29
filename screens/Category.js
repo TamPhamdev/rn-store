@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { StyleSheet } from "react-native";
-import AppNavigator from "./AppNavigator";
-
-export default function App() {
-  return <AppNavigator />;
+import { StyleSheet, View, Text, FlatList } from "react-native";
+export default function Category({ route }) {
+  const name = route.params.name;
+  return (
+    <View>
+      <Text>{name}</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
